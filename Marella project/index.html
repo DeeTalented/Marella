@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Login - Marella Group of School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image/Logo.jpeg" alt="Marella Group of School" class="logo">
+    </div>
+    
+    <h2>Login</h2>
+    <form action="complaint_form.html" method="post" onsubmit="return validateLogin()">
+        <label>Username:</label><br>
+        <input type="text" id="username" required><br><br>
+        <label>Password:</label><br>
+        <input type="password" id="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function validateLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            if (user === "admin" && pass === "marella123") {
+                return true;
+            } else {
+                alert("Invalid credentials!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
